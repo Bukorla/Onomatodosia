@@ -1,81 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/61a764966b.js" crossorigin="anonymous"></script>
-    <title class="logo">
-        ONOMATODOSIA
-    </title>
-
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <title>ONOMATODOSIA</title>
+  </head>
+  <body>
     <div class="container">
-        <div class="contents">
-            <div class="navs" id="mynav">
-                
-                <ul>
-                    <li class="logo">
-                       <a href="./landing-page.html" class="active"> ONOMATODOSIA</a>
-                    </li>
-                   <ul>
-                    <li class="drpdwn">
-                       <a href=" Types.html"> Types Of Animals</a>
-                        <ul class="list">
-                            <li>Aquatic Habitats</li>
-                            <li>Terestial Habitats</li>
-                            <li></li>
-                        </ul>
-                    </li>
-                    <li class="drpdwn">
-                       <a href="kinds.html"> Kinds Of Animals</a>
-                        <ul class="list">
-                            <li><a href="wild.html">Wild Animals</a></li>
-                            <li><a href="domestic.html">Domestic Animals</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="sign-up.html">Sign-Up</a>
-                    </li>
-                   
-                   </ul>
-                   <div class="icon">
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                        </a>
-                   </div>
+      <div class="contents">
+        <header class="navs" id="mynav">
+          <nav class="nav">
+            <li class="logo">
+              <a href="./landing-page.html" class="active"> ONOMATODOSIA</a>
+            </li>
+
+            <ul class="navigation" id="navbar">
+              <li class="drpdwn">
+                <a href=" Types.html"> Types Of Animals</a>
+                <ul class="list">
+                  <li>Aquatic Habitats</li>
+                  <li>Terestial Habitats</li>
+                  <li></li>
                 </ul>
+              </li>
+              <li class="drpdwn">
+                <a href="kinds.html"> Kinds Of Animals</a>
+                <ul class="list">
+                  <li><a href="wild.html">Wild Animals</a></li>
+                  <li><a href="domestic.html">Domestic Animals</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="sign-up.html">Sign-Up</a>
+              </li>
+            </ul>
+            <div id="toggleButton"><i class="fa-solid fa-bars"></i></div>
+            <!-- <div class="icon">
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div> -->
+          </nav>
+        </header>
+        <div class="main-contents">
+          <div class="overlay">
+            <div class="introduction">
+              <div class="header">
+                <h1>ONOMATODOSIA</h1>
+              </div>
+              <div class="sub-contents">
+                <p>
+                  A Place where awesome <span>KIDS</span> can
+                  <span>explore</span> the natural creatures on earth.
+                </p>
+                <a href="./animals.html">Let Go</a>
+              </div>
             </div>
-            <div class="main-contents">
-                <div class="overlay">
-                    <div class="introduction">
-                        <div class="header">
-                            <h1>ONOMATODOSIA</h1>
-                        </div>
-                        <div class="sub-contents">
-                            <p>
-                                A Place where awesome <span>KIDS</span> can <span>explore</span> the natural creatures on earth.
-                            </p>
-                            <a href="./animals.html">Let Go</a>
-                        </div>
-                   </div>
-                   <div class="awesome-kid">
-                    <img src="./images/jelly/atolla3.png" alt="">
-                   </div>
-                </div>
+            <div class="awesome-kid">
+              <img src="./images/jelly/atolla3.png" alt="" />
             </div>
+          </div>
         </div>
-        <script>
-            function myFunction() {
-              var x = document.getElementById("mynav");
-              if (x.className === "nav") {
-                x.className += " responsive";
-              } else {
-                x.className = "nav";
-              }
-            }
-            </script>
+      </div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("mynav");
+          if (x.className === "nav") {
+            x.className += " responsive";
+          } else {
+            x.className = "nav";
+          }
+        }
+      </script>
     </div>
-</body>
+    <!-- javascript -->
+    <script
+      async
+      src="https://kit.fontawesome.com/61a764966b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function toggleNavbar() {
+        const navbar = document.getElementById("navbar");
+        navbar.classList.toggle("shownavbar");
+      }
+      const toggleButton = document.getElementById("toggleButton");
+      toggleButton.addEventListener("click", toggleNavbar);
+    </script>
+  </body>
 </html>
